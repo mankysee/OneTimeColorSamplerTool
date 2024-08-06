@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Service
+ServiceTypes=Krita/PythonPlugin
+X-KDE-Library=OneTimeColorSamplerTool
+X-Python-2-Compatible=false
+X-Krita-Manual=Manual.html
+Name=One-time ColorSampler Tool
+Comment=A docker with a color sampler button that switch to Brush after mouse button release

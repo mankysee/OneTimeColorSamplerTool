@@ -76,10 +76,10 @@ class MouseObserver(QtCore.QObject):
 
     def eventFilter(self, obj, event):
         if self.window is obj:
-            if event.type() == QtCore.QEvent.MouseButtonPress:
+            if event.type() == QtCore.QEvent.MouseButtonPress or event.type() == QtCore.QEvent.TabletPress:
                 self.pressed.emit(event.pos())
-            elif event.type() == QtCore.QEvent.MouseMove:
+            elif event.type() == QtCore.QEvent.MouseMove or event.type() == QtCore.QEvent.TabletMove:
                 self.moved.emit(event.pos())
-            elif event.type() == QtCore.QEvent.MouseButtonRelease:
+            elif event.type() == QtCore.QEvent.MouseButtonRelease or event.type() == QtCore.QEvent.TabletRelease:
                 self.released.emit(event.pos())
         return super().eventFilter(obj, event)
